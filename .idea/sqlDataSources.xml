@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="adcedcfb-796e-4042-856c-b8c3076c8fc7" name="cine_pruebas@localhost Mapping">
+      <data-sources db="a8d5a680-54d7-4542-b829-d8aab04354e8" />
+      <scope>
+        <node kind="schema">
+          <name qname="cine_pruebas" />
+          <name qname="cine_test" />
+        </node>
+      </scope>
+    </mapping>
+  </component>
+</project>
