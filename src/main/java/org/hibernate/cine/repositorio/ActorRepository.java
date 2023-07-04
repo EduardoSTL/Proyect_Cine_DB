@@ -68,7 +68,7 @@ public class ActorRepository implements CrudRepository<Actor>{
             JTextField nacionalidadField = new JTextField(actor.getNacionalidad());
             JTextField fechaNacimientoField = new JTextField(formatFecha(actor.getFechaNacimiento()));
             JTextField lugarNacimientoField = new JTextField(actor.getLugarNacimiento());
-            JTextField fechaDefuncionField = new JTextField(formatFecha(actor.getFechaMuerte()));
+            JTextField fechaMuerteField = new JTextField(formatFecha(actor.getFechaMuerte()));
             JTextField lugarFallecimientoField = new JTextField(actor.getLugarMuerte());
 
             JPanel panel = new JPanel();
@@ -82,7 +82,7 @@ public class ActorRepository implements CrudRepository<Actor>{
             panel.add(new JLabel("Lugar de nacimiento:"));
             panel.add(lugarNacimientoField);
             panel.add(new JLabel("Fecha de defunción (yyyy/MM/dd):"));
-            panel.add(fechaDefuncionField);
+            panel.add(fechaMuerteField);
             panel.add(new JLabel("Lugar de fallecimiento:"));
             panel.add(lugarFallecimientoField);
 
@@ -93,7 +93,7 @@ public class ActorRepository implements CrudRepository<Actor>{
                 String nacionalidad = nacionalidadField.getText();
                 String fechaNacimiento = fechaNacimientoField.getText();
                 String lugarNacimiento = lugarNacimientoField.getText();
-                String fechaDefuncion = fechaDefuncionField.getText();
+                String fechaMuerte = fechaMuerteField.getText();
                 String lugarFallecimiento = lugarFallecimientoField.getText();
 
                 if (!nombre.isEmpty()) {
@@ -109,8 +109,8 @@ public class ActorRepository implements CrudRepository<Actor>{
                 if (!lugarNacimiento.isEmpty()) {
                     actor.setLugarNacimiento(lugarNacimiento);
                 }
-                if (!fechaDefuncion.isEmpty()) {
-                    Optional<LocalDateTime> fechaDef = parseFecha(fechaDefuncion);
+                if (!fechaMuerte.isEmpty()) {
+                    Optional<LocalDateTime> fechaDef = parseFecha(fechaMuerte);
                     fechaDef.ifPresent(actor::setFechaMuerte);
                 }
                 if (!lugarFallecimiento.isEmpty()) {

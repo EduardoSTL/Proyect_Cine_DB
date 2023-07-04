@@ -1,5 +1,4 @@
-package org.hibernate.cine;
-
+package org.hibernate.cine.service;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -8,7 +7,7 @@ import jakarta.persistence.Persistence;
 import org.hibernate.cine.entity.Actor;
 import org.hibernate.cine.entity.Pelicula;
 
-public class Listar {
+public class InsertarActorReparto {
     public static void insertarActorEnReparto(long idPelicula, long idActor) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("ProyectoCine");
         EntityManager em = emf.createEntityManager();
@@ -39,12 +38,5 @@ public class Listar {
             em.close();
             emf.close();
         }
-    }
-
-    public static void main(String[] args) {
-            long idPelicula = 7;
-            long idActor = 7;
-
-            insertarActorEnReparto(idPelicula, idActor);
     }
 }

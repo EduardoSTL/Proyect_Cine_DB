@@ -35,5 +35,28 @@ public class Reparto {
             em.close();
             emf.close();
         }
+
+
+        /*try {
+            em.getTransaction().begin();
+
+            // Crea un nuevo objeto Actor
+            Actor actor = new Actor();
+            actor.setNombre("Paul Danno");
+            actor.setNacionalidad("Inglaterra");
+            actor.setLugarNacimiento("Manchester");
+            actor.setFechaNacimiento("1998-05-09");
+            actor.setLugarMuerte(null);
+            actor.setFechaMuerte(null);
+            em.persist(actor);
+            em.getTransaction().commit();
+            System.out.println("Nuevo actor agregado con éxito.");
+        } catch (Exception e) {
+            em.getTransaction().rollback();
+            System.out.println("Error al agregar el actor: " + e.getMessage());
+        } finally {
+            em.close();
+            emf.close();
+        }*/
     }
 }
